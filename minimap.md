@@ -21,7 +21,7 @@ touch src/author/author.schema.ts
 nest g module book
 nest g resolver book
 nest g service book
-touch src/author/book.schema.ts
+touch src/book/book.schema.ts
 ```
 
 ---
