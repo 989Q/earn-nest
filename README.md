@@ -1,4 +1,11 @@
-## part-two
+### 🧸 Refferrent
+NestJS GraphQL TypeGraphQL
+- https://github.com/TomDoesTech/NestJS-GraphQL
+
+
+
+### 🧸 Error
+part-two
 
 ```diff
 yarn run v1.22.19
