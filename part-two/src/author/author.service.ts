@@ -17,4 +17,8 @@ export class AuthorService {
   async findMany() {
     return this.authorModel.find().lean();
   }
+
+  async createAuthor(input) {
+    return this.authorModel.create(input);
+  }
 }

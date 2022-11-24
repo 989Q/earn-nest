@@ -9,7 +9,7 @@ export type BookDocument = Book & mongoose.Document;
 @ObjectType()
 export class Book {
   @Field(() => ID)
-  id: number;
+  _id: number;
 
   @Prop({ required: true })
   @Field()
@@ -30,8 +30,8 @@ BookSchema.index({ author: 1 });
 
 @InputType()
 export class CreateBookInput {
-  @Field(() => ID)
-  id: number;
+  // @Field(() => ID)
+  // id: number;
 
   @Field()
   title: string;
@@ -39,12 +39,12 @@ export class CreateBookInput {
   @Field()
   isbn: string;
 
-  @Field(() => Int)
-  author: number;
+  @Field()
+  author: string;
 }
 
 @InputType()
 export class FindBookInput {
-  @Field(() => Int)
-  id: number;
+  @Field()
+  _id: string;
 }

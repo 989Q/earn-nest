@@ -11,7 +11,7 @@ import { BookModule } from './book/book.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://localhost/nestjs'),
+    MongooseModule.forRoot('mongodb://0.0.0.0:2717'),
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       autoSchemaFile: 'schema.gql',

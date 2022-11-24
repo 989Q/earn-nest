@@ -1,4 +1,4 @@
-import { Field, ObjectType, ID } from '@nestjs/graphql';
+import { Field, ObjectType, ID, InputType } from '@nestjs/graphql';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import * as mongoose from 'mongoose';
 import { Book } from 'src/book/book.schema';
@@ -21,3 +21,9 @@ export class Author {
 }
 
 export const AuthorSchema = SchemaFactory.createForClass(Author);
+
+@InputType()
+export class CreateAuthorInput {
+  @Field()
+  name: string;
+}

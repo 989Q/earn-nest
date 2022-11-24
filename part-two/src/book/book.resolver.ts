@@ -18,14 +18,14 @@ export class BookResolver {
     private authorService: AuthorService,
   ) {}
 
-  @Query(() => Book)
-  async book(@Args('input') { id }: FindBookInput) {
-    return this.bookService.findByID(id);
-  }
-
   @Query(() => [Book]) // <-- what will the query retrun?
   async books /* <-- Query name */() {
     return this.bookService.findMany(); // Resolve the query
+  }
+
+  @Query(() => Book)
+  async book(@Args('input') { _id }: FindBookInput) {
+    return this.bookService.findById(_id);
   }
 
   @Mutation(() => Book)

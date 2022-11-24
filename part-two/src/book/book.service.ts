@@ -15,7 +15,7 @@ export class BookService {
     return this.bookModel.find().lean();
   }
 
-  async findByID(id) {
+  async findById(id) {
     return this.bookModel.findById(id).lean();
   }
 
@@ -24,7 +24,6 @@ export class BookService {
   }
 
   async createBook(book: CreateBookInput) {
-    this.books = [book, ...this.books];
-    return book;
+    return this.bookModel.create(book);
   }
 }
