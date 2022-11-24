@@ -1,10 +1,12 @@
-> Stage : Adding MongoDB & structure nest
+> Stage : set product file structure
 
 ### 🧸 GOAL
 
 Purpose 1 : work with graphql , and connect dynamodb
 
-Purpose 2 : for importing into docker , and deply on aws ec2
+Purpose 2 : set product file structure
+
+Purpose 3 : for importing into docker , and deply on aws ec2
 
 </br>
 
@@ -20,3 +22,10 @@ Build a Scalable GraphQL Server With Nest.js + Typescript
 ### Normal
 Best way to create GraphQL API ?? | NestJS GraphQL Tutorial
 - https://www.youtube.com/watch?v=geYvdbpo3cA
+
+</br>
+
+### 🧸 Product file structure
+
+CatsMiaow/nestjs-project-structure
+- https://github.com/CatsMiaow/nestjs-project-structure
