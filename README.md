@@ -1,5 +1,15 @@
 > Stage : set product file structure
 
+### 🍺 Branch
+
+Start 
+> Learning nestjs graphQL mongoLocal
+
+Prod
+> Prepare to create the file structure for production
+
+</br>
+
 ### 🧸 GOAL
 
 Purpose 1 : work with graphql , and connect dynamodb
