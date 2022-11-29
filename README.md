@@ -1,4 +1,4 @@
-> Stage : set product file structure
+> Stage : Set product file structure , Compare the generated file with the sample file.
 
 ### 🍺 Branch
 
