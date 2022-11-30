@@ -5,6 +5,9 @@
 Start 
 > Learning nestjs graphQL mongoLocal
 
+Preprod
+> Ran into an unknown problem
+
 Prod
 > Prepare to create the file structure for production
 
