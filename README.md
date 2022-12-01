@@ -1,41 +1,57 @@
-> Stage : set product file structure
+### 🧸 nestjs graphql 
 
-### 🍺 Branch
+> validate graphql </br>
+> local mysql </br>
+> Implementing Pet / Owner relationship
 
-Start 
-> Learning nestjs graphQL mongoLocal
-
-Prod
-> Prepare to create the file structure for production
-
-</br>
-
-### 🧸 GOAL
-
-Purpose 1 : work with graphql , and connect dynamodb
-
-Purpose 2 : set product file structure
-
-Purpose 3 : for importing into docker , and deply on aws ec2
-
-</br>
-
-### 🧸 PLAN
-
-### easy
-Adding MongoDB to a GraphQL Server with NestJS, TypeScript & TypeGraphQL
-- https://www.youtube.com/watch?v=xnyULqzQ-Rk
-
-Build a Scalable GraphQL Server With Nest.js + Typescript
-- https://www.youtube.com/watch?v=0WgO3-HVH94
-
-### Normal
 Best way to create GraphQL API ?? | NestJS GraphQL Tutorial
-- https://www.youtube.com/watch?v=geYvdbpo3cA
+- https://www.youtube.com/watch?v=geYvdbpo3cA&t=84s
 
 </br>
 
-### 🧸 Product file structure
+### 🧸 npm install
+```bash
+pnpm add @nestjs/graphql graphql-tools graphql apollo-server-express
 
-CatsMiaow/nestjs-project-structure
-- https://github.com/CatsMiaow/nestjs-project-structure
+nest g module pets
+nest g service pets
+nest g resolver pets
+
+# Driver 
+pnpm add @nestjs/apollo
+
+# In case the version doesn't match
+pnpm add express@4.17.1
+pnpm add webpack@5.0.0
+```
+
+Validate
+
+```bash
+pnpm add @nestjs/typeorm typeorm sqlite3
+
+pnpm add class-validator class-transformer
+```
+
+Generate
+
+```bash
+nest g resource owners
+    > Graphql (code fist)
+```
+
+</br>
+
+### 🧸 Solve problem
+
+
+
+Type 'string' has no properties in common with type 'FindOneOptions<User>'
+- https://stackoverflow.com/questions/71635179/type-string-has-no-properties-in-common-with-type-findoneoptionsuser
+
+```ts
+# from
+return this.petsRepository.findOneByOrFail(id)
+# to
+return this.petsRepository.findOneByOrFail({id})
+```
