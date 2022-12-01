@@ -55,3 +55,15 @@ return this.petsRepository.findOneByOrFail(id)
 # to
 return this.petsRepository.findOneByOrFail({id})
 ```
+
+</br>
+
+### 🧸 Docs
+TypeORM Integration
+> in this project use old version until the document could not be found
+    
+Nestjs Validation , ValidationPipe
+- web : https://docs.nestjs.com/techniques/validation    
+    
+Nestjs Schema first
+- web : https://docs.nestjs.com/graphql/quick-start#schema-first
