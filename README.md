@@ -1,11 +1,11 @@
 ### 🧸 nestjs graphql 
 
-> validate graphql </br>
-> local mysql </br>
-> Implementing Pet / Owner relationship
+validate graphql , local mysql , Implementing Pet / Owner relationship 
+
+</br>
 
 Best way to create GraphQL API ?? | NestJS GraphQL Tutorial
-- https://www.youtube.com/watch?v=geYvdbpo3cA&t=84s
+- youtube : https://www.youtube.com/watch?v=geYvdbpo3cA&t=84s
 
 </br>
 
@@ -44,7 +44,7 @@ nest g resource owners
 
 ### 🧸 Solve problem
 
-
+![Screen Shot 2565-12-01 at 15 28 02](https://user-images.githubusercontent.com/73060136/205045686-49faff70-7652-4377-b2ff-007bfa555e5d.png)
 
 Type 'string' has no properties in common with type 'FindOneOptions<User>'
 - https://stackoverflow.com/questions/71635179/type-string-has-no-properties-in-common-with-type-findoneoptionsuser
