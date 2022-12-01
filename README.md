@@ -1,12 +1,12 @@
-> Stage : Set product file structure , Compare the generated file with the sample file.
+> Stage : Prod : Set product file structure , Compare the generated file with the sample file.
 
 ### 🍺 Branch
 
 Start 
-> Learning nestjs graphQL mongoLocal
+> Learning graphQL mongoLocal
 
-Preprod
-> Ran into an unknown problem
+Start2
+> Learning validate graphql , local mysql , Implementing Pet / Owner relationship 
 
 Prod
 > Prepare to create the file structure for production
