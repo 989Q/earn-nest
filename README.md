@@ -1,5 +1,4 @@
-> Stage : Prod : Set product file structure & Compare the generated file with the sample file.
-
+> Stage : Prod : adding mongodb
 ### 🍺 Branch
 
 Start 
@@ -9,7 +8,9 @@ Start2
 > Learning validate graphql , local mysql , Implementing Pet / Owner relationship 
 
 Prod
-> Prepare to create the file structure for production
+> Prepare to create the file structure for production. </br>
+> Set product file structure & Compare the generated file with the sample file.
+
 
 </br>
 
