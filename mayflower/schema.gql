@@ -3,15 +3,13 @@
 # ------------------------------------------------------
 
 type Author {
-  """Example field (placeholder)"""
-  exampleField: Int!
-  id: ID!
+  _id: ID!
   name: String!
   blogs: [Blog!]!
 }
 
 type Blog {
-  id: ID!
+  _id: ID!
   title: String!
   isbn: String!
   author: Author!
@@ -24,16 +22,20 @@ type Query {
 }
 
 input FindBlogInput {
-  id: Int!
+  _id: String!
 }
 
 type Mutation {
   createBlog(input: CreateBlogInput!): Blog!
+  createAuthor(input: CreateAuthorInput!): Author!
 }
 
 input CreateBlogInput {
-  id: ID!
   title: String!
   isbn: String!
-  author: Int!
+  author: String!
+}
+
+input CreateAuthorInput {
+  name: String!
 }

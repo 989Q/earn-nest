@@ -2,37 +2,35 @@ import { Injectable } from '@nestjs/common';
 import { CreateBlogInput } from './dto/create-blog.input';
 import { UpdateBlogInput } from './dto/update-blog.input';
 
-import { Blog } from './entities/blog.entity';
+import { Blog, BlogDocument } from './entities/blog.entity';
 import blogs from '../data/blogs';
+import { InjectModel } from '@nestjs/mongoose';
+import { Model } from 'mongoose';
 
 @Injectable()
 export class BlogService {
 
   blogs: Partial<Blog>[];
-  constructor(){
+  constructor(
+    @InjectModel(Blog.name) private blogModel: Model<BlogDocument>,
+  ){
     this.blogs = blogs
   }
 
-  createBlog(blog: CreateBlogInput) {
-    this.blogs = [blog, ...this.blogs];
-    return blog;
+  async createBlog(blog: CreateBlogInput) {
+    return this.blogModel.create(blog);
   }
 
   async findAll() {
-    return this.blogs;
+    return this.blogModel.find().lean();
   }
 
-  async findById(id: number) {
-    const blogs = this.blogs.filter((blog) => blog.id === id);
-    if(blogs.length){
-      return blogs[0]
-    }
-
-    return null
+  async findById(id) {
+    return this.blogModel.findById(id).lean();
   }
 
   async findByAuthorId(authorId) {
-    return this.blogs.filter((blog) => blog.author === authorId);
+    return this.blogModel.find({ author: authorId });
   }
 
 

@@ -12,14 +12,20 @@ export class AuthorsResolver {
     private blogService: BlogService
   ) {}
 
+  @Mutation(() => Author)
+  async createAuthor(@Args('input') input: CreateAuthorInput){
+    return this.authorService.createAuthor(input)
+  }
+
   @Query(() => [Author])
   async authors() {
     return this.authorService.findAll();
   }
 
+
   @ResolveField()
   async blogs(@Parent() parent: Author) {
-    return this.blogService.findByAuthorId(parent.id);
+    return this.blogService.findByAuthorId(parent._id);
   }
 }
   

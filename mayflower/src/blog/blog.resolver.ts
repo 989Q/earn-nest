@@ -25,8 +25,8 @@ export class BlogResolver {
   }
 
   @Query(() => Blog)
-  async blog(@Args('input'){ id }: FindBlogInput) {
-    return this.blogService.findById(id)
+  async blog(@Args('input') { _id }: FindBlogInput) {
+    return this.blogService.findById(_id)
   }
 
   @ResolveField(() => Author)
