@@ -1,4 +1,4 @@
-> Stage : Prod : PowerUp MongoDB Schema
+> Stage : Prod : connect aws-ec2 with nestjs on same port 3000 , PowerUp MongoDB Schema
 ### 🍺 Branch
 
 Start 
