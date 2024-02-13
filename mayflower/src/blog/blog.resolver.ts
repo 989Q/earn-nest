@@ -34,13 +34,13 @@ export class BlogResolver {
     return this.authorService.findById(blog.author);
   }
 
-  // @Mutation(() => Blog)
-  // updateBlog(@Args('updateBlogInput') updateBlogInput: UpdateBlogInput) {
-  //   return this.blogService.update(updateBlogInput.id, updateBlogInput);
-  // }
+  @Mutation(() => Blog)
+  updateBlog(@Args('updateBlogInput') updateBlogInput: UpdateBlogInput) {
+    return this.blogService.update(updateBlogInput.id, updateBlogInput);
+  }
 
-  // @Mutation(() => Blog)
-  // removeBlog(@Args('id', { type: () => Int }) id: number) {
-  //   return this.blogService.remove(id);
-  // }
+  @Mutation(() => Blog)
+  removeBlog(@Args('id', { type: () => Int }) id: number) {
+    return this.blogService.remove(id);
+  }
 }

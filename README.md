@@ -1,4 +1,5 @@
 ### 🐣 env
+
 environment
 ```bash
 # start proj
@@ -6,16 +7,19 @@ npm i @nestjs/graphql @nestjs/apollo graphql apollo-server-express
 # add mongo
 npm i @nestjs/mongoose mongoose
 ```
+
 dependency
 ```
 nest g resource blogs
 
 nest g resource authors
 ```
+
 </br>
 
 ### 🐣 Schema
-Blog
+
+Blog Schema
 ```bash
 # blog
 blog_ID # Blog123
@@ -29,17 +33,6 @@ blog_Status # show , hidden
 # Date
 blog_Create # var datetime = new Date();
 blog_Update # var datetime = new Date();
-```
-
-? Lawyer 
-```bash
-# personal
-lawyer_ID
-lawyer_Name
-# contact
-lawyer_Line
-lawyer_Phone
-lawyer_Facebook
 ```
 
 </br>
